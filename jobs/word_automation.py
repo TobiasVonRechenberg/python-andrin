@@ -5,24 +5,25 @@ from docx.shared import Inches
 
 document = Document()
 
-document.add_heading('Document Title', 0)
+document.add_heading('Poststrasse 18 111 Niederhausen', 0)
 
-p = document.add_paragraph('A plain paragraph having some ')
-p.add_run('bold').bold = True
-p.add_run(' and some ')
-p.add_run('italic.').italic = True
+p = document.add_paragraph('28 November, 2019')
+('\n')
+p.add_run('                                                                                                                                                                                                                                                                ')
+p.add_run(' von Herrn ')
+p.add_run('Müller.').Müller = True
 
-document.add_heading('Heading, level 1', level=1)
-document.add_paragraph('Intense quote', style='Intense Quote')
+document.add_heading(' An Frau Müller, 99', level=1)
+document.add_paragraph('Betrag der Rechnung', style='Intense Quote')
 
 document.add_paragraph(
-    'first item in unordered list', style='List Bullet'
+    'Erste Spalte = Kosten', style='List Number'
 )
 document.add_paragraph(
-    'first item in ordered list', style='List Number'
+    'Zweite Liste = Versandkosten', style='List Number'
 )
 
-document.add_picture('../input/monty-truth.png', width=Inches(1.25))
+document.add_picture('../input/Bildgeld.jpg', width=Inches(1.25))
 
 records = (
     (3, '101', 'Spam'),
